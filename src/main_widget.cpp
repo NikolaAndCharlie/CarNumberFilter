@@ -1,6 +1,7 @@
 #include "main_widget.h"
 #include "qpushbutton.h"
 #include "qlayout.h"
+#include "number_generator.h"
 
 MainWidget::MainWidget()
 {
@@ -17,6 +18,8 @@ void MainWidget::SetUi()
     QPushButton* import_button = new QPushButton(tr("Import"));
     QPushButton* output_button = new QPushButton(tr("Output"));
     QPushButton* generate_button = new QPushButton(tr("Generate"));
+
+    connect(generate_button, &QPushButton::clicked, this, &MainWidget::GenerateExcel);
 
     QHBoxLayout* layout = new QHBoxLayout();
     layout->addWidget(generate_button);
@@ -36,5 +39,5 @@ void MainWidget::OutPutExcel()
 
 void MainWidget::GenerateExcel()
 {
-
+    NumberGenerator::Instane()->GenrateNumberExcel();
 }

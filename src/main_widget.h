@@ -14,7 +14,7 @@ public:
     ~MainWidget();
 private:
     void SetUi();
-private slots:
+public slots:
     void ImportExcel();
     void OutPutExcel();
     void GenerateExcel();

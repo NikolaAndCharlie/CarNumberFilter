@@ -25,10 +25,11 @@ find_package(Qt5
 	Xml
 	Concurrent
 	Network
+	AxContainer
 	REQUIRED
 )
 
-set(Qt5_LIBS Qt5::Core Qt5::Widgets Qt5::Gui Qt5::Sql Qt5::Xml Qt5::Concurrent Qt5::Network)
+set(Qt5_LIBS Qt5::Core Qt5::Widgets Qt5::Gui Qt5::Sql Qt5::Xml Qt5::Concurrent Qt5::Network Qt5::AxContainer)
 
 file(GLOB SRCS src/*.cpp)
 file(GLOB HDRS src/*.h)
